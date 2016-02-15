@@ -22,7 +22,7 @@ console.log(newNames);
 //Map Method
 newUpperCaseList = [];
 
-myFilter(names, function(name) {
+myMap(names, function(name) {
     var upperName = name.toUpperCase();
     newUpperCaseList.push(upperName);
 });
