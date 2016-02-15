@@ -15,22 +15,22 @@ Animal.prototype.getName = function(){
     return this.name;
 };
 
-// Dog - subclass
-function Dog(name) {
+// Cat - subclass
+function Cat(name) {
     Animal.call(this);
     this.name = name;
 }
 
-Dog.prototype = Object.create(Animal.prototype); // subclass extends superclass
-Dog.prototype.constructor = Dog;
-Dog.prototype.bark = function() {
+Cat.prototype = Object.create(Animal.prototype); // subclass extends superclass
+Cat.prototype.constructor = Cat;
+Cat.prototype.bark = function() {
     return 'WOW'
 };
 
 var animal = new Animal();
-var dog = new Dog('Daisy');
+var cat = new Cat ('Daisy');
 
-console.log('Is dog an instance of Dog?', dog instanceof Dog); // true)
-console.log('Is dog an instance of Animal?', dog instanceof Animal);// true
-dog.getName();
-console.log('Dog bark: ' +  dog.bark());
+console.log('Is dog an instance of Cat?', cat instanceof Cat); // true)
+console.log('Is dog an instance of Animal?', cat instanceof Animal);// true
+cat.getName();
+console.log('Cat bark: ' +  cat.bark());
