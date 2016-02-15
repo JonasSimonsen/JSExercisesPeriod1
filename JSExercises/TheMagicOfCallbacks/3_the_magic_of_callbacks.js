@@ -20,8 +20,8 @@ var filterArray = names.filterArrayLength(function(name){
 console.log("Filter Prototype: " + filterArray);
 
 
-//UpperCase Prototype
-Array.prototype.myUpperCase = function(callback) {
+//Map Prototype
+Array.prototype.myMap = function(callback) {
     var newArray = [];
     for(var i = 0; i < this.length; i++) {
         newArray.push(this[i].toUpperCase());
@@ -29,5 +29,5 @@ Array.prototype.myUpperCase = function(callback) {
     return newArray;
 };
 
-var upperCased = names.myUpperCase();
-console.log("UpperCase Prototype: " + upperCased);
+var mapArray = names.myMap();
+console.log("Map Prototype: " + mapArray);
