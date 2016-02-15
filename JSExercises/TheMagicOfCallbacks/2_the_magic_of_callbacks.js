@@ -20,8 +20,13 @@ console.log(newNames);
 
 
 //Map Method
-newUpperCaseList = [];
+function myMap(array, callback) {
+    for(var i = 0; i < array.length; i++) {
+        callback(array[i]);
+    }
+}
 
+newUpperCaseList = [];
 myMap(names, function(name) {
     var upperName = name.toUpperCase();
     newUpperCaseList.push(upperName);
