@@ -33,3 +33,35 @@ myMap(names, function(name) {
 });
 
 console.log(newUpperCaseList);
+
+
+
+
+//// LARS MAPPED EXAMPLE ////
+
+var numbers = [1,2,3,4,5];
+
+//// USING THE MAP FUUNCTION ////
+
+var numbersMapped = numbers.map(function (number){
+    return number * 10;
+});
+
+ //// MAKING OUR OWN MAP FUNCTION ////
+
+function myMap(arr,callback){
+    var returnArray = [];
+    for(var i = 0; i < arr.length; i++) {
+        returnArray.push(callback(arr[i]));
+
+        // var temp = callback(arr[i]);
+        // retrunArray.push(temp);
+    }
+    return returnArray;
+}
+var res2 = myMap(numbers, function (number){
+    return number * 10;
+});
+
+console.log(numbersMapped);
+console.log(res2);
